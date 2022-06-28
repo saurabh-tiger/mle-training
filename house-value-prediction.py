@@ -1,8 +1,7 @@
+"""Script to predict housing value."""
 import os
 import tarfile
 
-import matplotlib as mpl
-import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from scipy.stats import randint
@@ -19,13 +18,22 @@ from sklearn.model_selection import (
 )
 from sklearn.tree import DecisionTreeRegressor
 
+# Data collection
 DOWNLOAD_ROOT = "https://raw.githubusercontent.com/ageron/handson-ml/master/"
 HOUSING_PATH = os.path.join("datasets", "housing")
 HOUSING_URL = DOWNLOAD_ROOT + "datasets/housing/housing.tgz"
 
 
 def fetch_housing_data(housing_url=HOUSING_URL, housing_path=HOUSING_PATH):
-    '''Fetch housing data'''
+    """Fetch housing data.
+
+    Parameters:
+    housing_url(string): Dataset URL
+    housing_path(string): path to store the new data
+
+    Return:
+    None
+    """
     os.makedirs(housing_path, exist_ok=True)
     tgz_path = os.path.join(housing_path, "housing.tgz")
     urllib.request.urlretrieve(housing_url, tgz_path)
@@ -35,17 +43,28 @@ def fetch_housing_data(housing_url=HOUSING_URL, housing_path=HOUSING_PATH):
 
 
 def load_housing_data(housing_path=HOUSING_PATH):
+    """Load housing data in Pandas Dataframe.
+
+    Parameters:
+    housing_path(string): path where data is stored
+
+    Return:
+    (Pandas.DataFrame)
+    """
     csv_path = os.path.join(housing_path, "housing.csv")
     return pd.read_csv(csv_path)
 
+
 def income_cat_proportions(data):
+    """Calculate proportion of each unique value."""
     return data["income_cat"].value_counts() / len(data)
 
-print("Fetching and Loading data ...")
+
+# Fetch and Load data
 fetch_housing_data()
 housing = load_housing_data()
 
-print("data preprocessing...")
+# data preprocessing
 housing["income_cat"] = pd.cut(
     housing["median_income"],
     bins=[0.0, 1.5, 3.0, 4.5, 6.0, np.inf],
@@ -129,7 +148,7 @@ print(f"lin_rmse: {lin_rmse}")
 lin_mae = mean_absolute_error(housing_labels, housing_predictions)
 print(f"lin_mae: {lin_mae}")
 
-print("Decision Tree=====================")
+print("Decision Tree======================")
 tree_reg = DecisionTreeRegressor(random_state=42)
 tree_reg.fit(housing_prepared, housing_labels)
 
@@ -139,7 +158,7 @@ tree_rmse = np.sqrt(tree_mse)
 print(f"tree_rmse: {tree_rmse}")
 
 
-print(f"Random Forest===================")
+print("Random Forest=====================")
 param_distribs = {
     "n_estimators": randint(low=1, high=200),
     "max_features": randint(low=1, high=8),
@@ -159,7 +178,7 @@ cvres = rnd_search.cv_results_
 for mean_score, params in zip(cvres["mean_test_score"], cvres["params"]):
     print(np.sqrt(-mean_score), params)
 
-print(f"Random Forest Regressor=======")
+print("Random Forest Regressor===========")
 param_grid = [
     # try 12 (3×4) combinations of hyperparameters
     {"n_estimators": [3, 10, 30], "max_features": [2, 4, 6, 8]},
