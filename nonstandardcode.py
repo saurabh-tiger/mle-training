@@ -38,11 +38,14 @@ def load_housing_data(housing_path=HOUSING_PATH):
     csv_path = os.path.join(housing_path, "housing.csv")
     return pd.read_csv(csv_path)
 
+def income_cat_proportions(data):
+    return data["income_cat"].value_counts() / len(data)
+
+print("Fetching and Loading data ...")
 fetch_housing_data()
 housing = load_housing_data()
 
-train_set, test_set = train_test_split(housing, test_size=0.2, random_state=42)
-
+print("data preprocessing...")
 housing["income_cat"] = pd.cut(
     housing["median_income"],
     bins=[0.0, 1.5, 3.0, 4.5, 6.0, np.inf],
@@ -56,10 +59,6 @@ for train_index, test_index in split.split(housing, housing["income_cat"]):
     strat_test_set = housing.loc[test_index]
 
 
-def income_cat_proportions(data):
-    return data["income_cat"].value_counts() / len(data)
-
-
 train_set, test_set = train_test_split(housing, test_size=0.2, random_state=42)
 
 compare_props = pd.DataFrame(
@@ -69,6 +68,7 @@ compare_props = pd.DataFrame(
         "Random": income_cat_proportions(test_set),
     }
 ).sort_index()
+
 compare_props["Rand. %error"] = (
     100 * compare_props["Random"] / compare_props["Overall"] - 100
 )
@@ -80,6 +80,7 @@ for set_ in (strat_train_set, strat_test_set):
     set_.drop("income_cat", axis=1, inplace=True)
 
 housing = strat_train_set.copy()
+print("data visualization...")
 housing.plot(kind="scatter", x="longitude", y="latitude")
 housing.plot(kind="scatter", x="longitude", y="latitude", alpha=0.1)
 
@@ -94,7 +95,7 @@ housing = strat_train_set.drop(
 )  # drop labels for training set
 housing_labels = strat_train_set["median_house_value"].copy()
 
-
+print("Imputing...")
 imputer = SimpleImputer(strategy="median")
 
 housing_num = housing.drop("ocean_proximity", axis=1)
@@ -114,7 +115,7 @@ housing_tr["population_per_household"] = (
 housing_cat = housing[["ocean_proximity"]]
 housing_prepared = housing_tr.join(pd.get_dummies(housing_cat, drop_first=True))
 
-
+print("Linear regression==================")
 lin_reg = LinearRegression()
 lin_reg.fit(housing_prepared, housing_labels)
 
@@ -122,22 +123,23 @@ lin_reg.fit(housing_prepared, housing_labels)
 housing_predictions = lin_reg.predict(housing_prepared)
 lin_mse = mean_squared_error(housing_labels, housing_predictions)
 lin_rmse = np.sqrt(lin_mse)
-lin_rmse
+print(f"lin_rmse: {lin_rmse}")
 
 
 lin_mae = mean_absolute_error(housing_labels, housing_predictions)
-lin_mae
+print(f"lin_mae: {lin_mae}")
 
-
+print("Decision Tree=====================")
 tree_reg = DecisionTreeRegressor(random_state=42)
 tree_reg.fit(housing_prepared, housing_labels)
 
 housing_predictions = tree_reg.predict(housing_prepared)
 tree_mse = mean_squared_error(housing_labels, housing_predictions)
 tree_rmse = np.sqrt(tree_mse)
-tree_rmse
+print(f"tree_rmse: {tree_rmse}")
 
 
+print(f"Random Forest===================")
 param_distribs = {
     "n_estimators": randint(low=1, high=200),
     "max_features": randint(low=1, high=8),
@@ -157,7 +159,7 @@ cvres = rnd_search.cv_results_
 for mean_score, params in zip(cvres["mean_test_score"], cvres["params"]):
     print(np.sqrt(-mean_score), params)
 
-
+print(f"Random Forest Regressor=======")
 param_grid = [
     # try 12 (3×4) combinations of hyperparameters
     {"n_estimators": [3, 10, 30], "max_features": [2, 4, 6, 8]},
@@ -212,3 +214,4 @@ X_test_prepared = X_test_prepared.join(pd.get_dummies(X_test_cat, drop_first=Tru
 final_predictions = final_model.predict(X_test_prepared)
 final_mse = mean_squared_error(y_test, final_predictions)
 final_rmse = np.sqrt(final_mse)
+print(f"final_rmse: {final_rmse}")
