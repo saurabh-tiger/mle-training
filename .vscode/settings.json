@@ -1,0 +1,20 @@
+{
+    "python.defaultInterpreterPath": "/home/saurabhzinjad/miniconda3/bin/python3",
+    // Begin - linting(flake8), formatting(black), sorting(isort)
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": false,
+    "editor.formatOnSave": true,
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--line-length=120"
+    ],
+    "python.sortImports.args": [
+        "--profile=black",
+    ],
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true,
+        }
+    }
+    // End - linting(flake8), formatting(black), sorting(isort)
+}
