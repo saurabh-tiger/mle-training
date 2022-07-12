@@ -23,3 +23,44 @@ conda env create -f env.yml
 ```bash
 python house-value-prediction.py
 ```
+
+
+## Things I did and need to verfiy
+- [x] Commented out visualization and correlation
+- [x] Didn't see the use of compare_props, so commented it as well.
+- [ ] Logger code seems redundant for every module.
+
+## Ignore
+```ini
+# Log-configuration.ini
+[loggers]
+keys=root
+
+[handlers]
+keys=consoleHandler, fileHandler
+
+[formatters]
+keys=extend
+
+[logger_root]
+level=NOTSET
+handlers=consoleHandler, fileHandler
+
+[handler_fileHandler]
+class=FileHandler
+level=NOTSET
+formatter=extend
+# filename='logs/application.log'
+args=('logs/application.log', 'a')
+
+[handler_consoleHandler]
+class=StreamHandler
+level=NOTSET
+formatter=extend
+args=(sys.stdout,)
+
+[formatter_extend]
+format=%(asctime)s [%(levelname)s] %(filename)s - %(funcName)s - %(message)s
+datefmt=%Y-%m-%d %H:%M:%S
+validate=True
+```
