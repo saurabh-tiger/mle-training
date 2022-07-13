@@ -24,6 +24,15 @@ conda env create -f env.yml
 python house-value-prediction.py
 ```
 
+## To create package
+```bash
+pip install -e .
+```
+
+## To crate wheel or tar file packge
+```bash
+python setup.py sdist bdist_wheel
+```
 
 ## Things I did and need to verfiy
 - [x] Commented out visualization and correlation

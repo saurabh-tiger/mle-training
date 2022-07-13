@@ -1,5 +1,6 @@
 """ Script for data collection, ingestion and preprocessing."""
 import argparse
+import configparser
 import os
 import tarfile
 
@@ -11,6 +12,10 @@ from sklearn.model_selection import StratifiedShuffleSplit, train_test_split
 
 # Import custom logger
 import log_configurar
+
+# Read configuration
+config = configparser.ConfigParser()
+config.read("setup.cfg")
 
 # Parse arugments
 parser = argparse.ArgumentParser()
@@ -34,7 +39,7 @@ args = parser.parse_args()
 # Configure logger
 logger = log_configurar.configure_logger(log_file=args.log_path, console=args.no_console_log, log_level=args.log_level,)
 
-HOUSING_URL = "https://raw.githubusercontent.com/ageron/handson-ml/master/datasets/housing/housing.tgz"
+HOUSING_URL = config["data"]["housing-url"]
 HOUSING_PATH = os.path.join(args.output_path, "raw")
 
 
