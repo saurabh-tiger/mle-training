@@ -6,7 +6,7 @@ LOGGING_DEFAULT_CONFIG = {
     "disable_existing_loggers": True,
     "formatters": {
         "default_formatter": {
-            "format": "%(asctime)s [%(levelname)s] %(filename)s - %(funcName)s - %(message)s",
+            "format": "%(asctime)s [%(levelname)s] %(filename)s:%(lineno)d:%(funcName)s - %(message)s",
             "datefmt": "%Y-%m-%d %H:%M:%S",
         }
     },
@@ -24,7 +24,14 @@ LOGGING_DEFAULT_CONFIG = {
             "filename": "logs/default.log",
         },
     },
-    "loggers": {"": {"level": "NOTSET", "handlers": ["consoleHandler", "fileHandler"]},},
+    "loggers": {
+        "": {
+            "level": "NOTSET",
+            "handlers": [
+                # "consoleHandler", "fileHandler"
+            ],
+        },
+    },
 }
 
 
