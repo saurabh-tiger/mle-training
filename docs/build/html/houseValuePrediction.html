@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>houseValuePrediction package &mdash; House Price Prediction 0.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="main module" href="main.html" />
+    <link rel="prev" title="src" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> House Price Prediction
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">src</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">houseValuePrediction package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-houseValuePrediction.ingest_data">houseValuePrediction.ingest_data module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-houseValuePrediction.log_configurar">houseValuePrediction.log_configurar module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-houseValuePrediction.score">houseValuePrediction.score module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-houseValuePrediction.train">houseValuePrediction.train module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-houseValuePrediction">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">House Price Prediction</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">src</a> &raquo;</li>
+      <li>houseValuePrediction package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/houseValuePrediction.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="housevalueprediction-package">
+<h1>houseValuePrediction package<a class="headerlink" href="#housevalueprediction-package" title="Permalink to this headline"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</section>
+<section id="module-houseValuePrediction.ingest_data">
+<span id="housevalueprediction-ingest-data-module"></span><h2>houseValuePrediction.ingest_data module<a class="headerlink" href="#module-houseValuePrediction.ingest_data" title="Permalink to this headline"></a></h2>
+<p>Script for data collection, ingestion and preprocessing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">param output-path</dt>
+<dd class="field-odd"><p>Output folder to store processed, train and testdownloaded data.</p>
+</dd>
+<dt class="field-even">type output-path</dt>
+<dd class="field-even"><p>string</p>
+</dd>
+<dt class="field-odd">param log-level</dt>
+<dd class="field-odd"><p>Mention priority of logs according to severity.</p>
+</dd>
+<dt class="field-even">type log-level</dt>
+<dd class="field-even"><p>string</p>
+</dd>
+<dt class="field-odd">param log-path</dt>
+<dd class="field-odd"><p>Full path to a log file, if logs are to be written to a file.</p>
+</dd>
+<dt class="field-even">type log-path</dt>
+<dd class="field-even"><p>string</p>
+</dd>
+<dt class="field-odd">param no-console-log</dt>
+<dd class="field-odd"><p>Whether or not to write logs to the console.</p>
+</dd>
+<dt class="field-even">type no-console-log</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="houseValuePrediction.ingest_data.data_collection_preprocessing">
+<span class="sig-prename descclassname"><span class="pre">houseValuePrediction.ingest_data.</span></span><span class="sig-name descname"><span class="pre">data_collection_preprocessing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'data/processed/'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/houseValuePrediction/ingest_data.html#data_collection_preprocessing"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#houseValuePrediction.ingest_data.data_collection_preprocessing" title="Permalink to this definition"></a></dt>
+<dd><p>Run ingest_data python script for all data preprocessing step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>output_path</strong> – Output folder to store processed, train and testdownloaded data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="houseValuePrediction.ingest_data.data_preprocessing">
+<span class="sig-prename descclassname"><span class="pre">houseValuePrediction.ingest_data.</span></span><span class="sig-name descname"><span class="pre">data_preprocessing</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/houseValuePrediction/ingest_data.html#data_preprocessing"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#houseValuePrediction.ingest_data.data_preprocessing" title="Permalink to this definition"></a></dt>
+<dd><p>Run data preprocessing step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Preprocessed dataframe</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="houseValuePrediction.ingest_data.fetch_housing_data">
+<span class="sig-prename descclassname"><span class="pre">houseValuePrediction.ingest_data.</span></span><span class="sig-name descname"><span class="pre">fetch_housing_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">housing_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'https://raw.githubusercontent.com/ageron/handson-ml/master/datasets/housing/housing.tgz'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">housing_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'data/raw/'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/houseValuePrediction/ingest_data.html#fetch_housing_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#houseValuePrediction.ingest_data.fetch_housing_data" title="Permalink to this definition"></a></dt>
+<dd><p>Fetch housing data.</p>
+<p>Download dataset from given URL. and then store it in given path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>housing_url</strong> (<em>string</em>) – Dataset URL</p></li>
+<li><p><strong>housing_path</strong> (<em>string</em>) – Path to store the new data</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="houseValuePrediction.ingest_data.get_args">
+<span class="sig-prename descclassname"><span class="pre">houseValuePrediction.ingest_data.</span></span><span class="sig-name descname"><span class="pre">get_args</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/houseValuePrediction/ingest_data.html#get_args"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#houseValuePrediction.ingest_data.get_args" title="Permalink to this definition"></a></dt>
+<dd><p>Parse command line arugments.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>argparse.Namespace</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="houseValuePrediction.ingest_data.load_housing_data">
+<span class="sig-prename descclassname"><span class="pre">houseValuePrediction.ingest_data.</span></span><span class="sig-name descname"><span class="pre">load_housing_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">housing_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'data/raw/'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/houseValuePrediction/ingest_data.html#load_housing_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#houseValuePrediction.ingest_data.load_housing_data" title="Permalink to this definition"></a></dt>
+<dd><p>Load housing data in Pandas Dataframe.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>housing_path</strong> (<em>string</em>) – path where data is stored</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dataframe loaded with data from csv file</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="houseValuePrediction.ingest_data.save_train_test_data">
+<span class="sig-prename descclassname"><span class="pre">houseValuePrediction.ingest_data.</span></span><span class="sig-name descname"><span class="pre">save_train_test_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">train_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">store_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">train_csv_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'train_data.csv'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_csv_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'test_data.csv'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/houseValuePrediction/ingest_data.html#save_train_test_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#houseValuePrediction.ingest_data.save_train_test_data" title="Permalink to this definition"></a></dt>
+<dd><p>Save given pandas.DataFrame in given storage path with file_name</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>train_data</strong> (<em>pandas.DataFrame</em>) – preprocessed train dataframe to store.</p></li>
+<li><p><strong>test_data</strong> (<em>pandas.DataFrame</em>) – preprocessed test dataframe to store.</p></li>
+<li><p><strong>store_path</strong> (<em>string</em>) – path where dataframe will get stored.</p></li>
+<li><p><strong>train_csv_name</strong> (<em>string</em>) – name which will get assigned to stored train file.</p></li>
+<li><p><strong>test_csv_name</strong> (<em>string</em>) – name which will get assigned to stored test file.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="houseValuePrediction.ingest_data.split_train_test_data">
+<span class="sig-prename descclassname"><span class="pre">houseValuePrediction.ingest_data.</span></span><span class="sig-name descname"><span class="pre">split_train_test_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/houseValuePrediction/ingest_data.html#split_train_test_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#houseValuePrediction.ingest_data.split_train_test_data" title="Permalink to this definition"></a></dt>
+<dd><p>Split preprocessed dataset into train-test and target-label section.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>output_path</strong> (<em>string</em>) – Output folder to store processed, train and testdownloaded data.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>pandas.DataFrame</em> – training dataset</p></li>
+<li><p><em>pandas.DataFrame</em> – testing dataset</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-houseValuePrediction.log_configurar">
+<span id="housevalueprediction-log-configurar-module"></span><h2>houseValuePrediction.log_configurar module<a class="headerlink" href="#module-houseValuePrediction.log_configurar" title="Permalink to this headline"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="houseValuePrediction.log_configurar.configure_logger">
+<span class="sig-prename descclassname"><span class="pre">houseValuePrediction.log_configurar.</span></span><span class="sig-name descname"><span class="pre">configure_logger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cfg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">console</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'DEBUG'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/houseValuePrediction/log_configurar.html#configure_logger"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#houseValuePrediction.log_configurar.configure_logger" title="Permalink to this definition"></a></dt>
+<dd><p>Function to setup configurations of logger through function.</p>
+<p>The individual arguments of <cite>log_file</cite>, <cite>console</cite>, <cite>log_level</cite> will overwrite the ones in cfg.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>logger</strong> – Predefined logger object if present. If None a ew logger object will be created from root.</p></li>
+<li><p><strong>cfg</strong> (<em>dict</em><em>(</em><em>)</em>) – Configuration of the logging to be implemented by default</p></li>
+<li><p><strong>log_file</strong> (<em>str</em>) – Path to the log file for logs to be stored</p></li>
+<li><p><strong>console</strong> (<em>bool</em>) – To include a console handler(logs printing in console)</p></li>
+<li><p><strong>log_level</strong> (<em>str</em>) – One of <cite>[“INFO”,”DEBUG”,”WARNING”,”ERROR”,”CRITICAL”]</cite>
+default - <cite>“DEBUG”</cite></p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>logging.Logger</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-houseValuePrediction.score">
+<span id="housevalueprediction-score-module"></span><h2>houseValuePrediction.score module<a class="headerlink" href="#module-houseValuePrediction.score" title="Permalink to this headline"></a></h2>
+<p>Script for evalution score of trained model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">param validation-dataset</dt>
+<dd class="field-odd"><p>Processed validation dataset.</p>
+</dd>
+<dt class="field-even">param log-level</dt>
+<dd class="field-even"><p>Mention priority of logs according to severity.</p>
+</dd>
+<dt class="field-odd">param log-path</dt>
+<dd class="field-odd"><p>Full path to a log file, if logs are to be written to a file.</p>
+</dd>
+<dt class="field-even">param no-console-log</dt>
+<dd class="field-even"><p>Whether or not to write logs to the console.</p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="houseValuePrediction.score.get_args">
+<span class="sig-prename descclassname"><span class="pre">houseValuePrediction.score.</span></span><span class="sig-name descname"><span class="pre">get_args</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/houseValuePrediction/score.html#get_args"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#houseValuePrediction.score.get_args" title="Permalink to this definition"></a></dt>
+<dd><p>Parse command line arugments.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>argparse.Namespace</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="houseValuePrediction.score.predict_on_test_data">
+<span class="sig-prename descclassname"><span class="pre">houseValuePrediction.score.</span></span><span class="sig-name descname"><span class="pre">predict_on_test_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">sklearn.ensemble._forest.RandomForestRegressor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_test</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/houseValuePrediction/score.html#predict_on_test_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#houseValuePrediction.score.predict_on_test_data" title="Permalink to this definition"></a></dt>
+<dd><p>Predict test data on given model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model</strong> (<em>sklearn.ensemble.RandomForestRegressor</em>) – Trained Random forest model with grid search.</p></li>
+<li><p><strong>X_test</strong> (<em>pandas.DataFrame</em>) – features of testing dataset.</p></li>
+<li><p><strong>y_test</strong> (<em>pandas.DataFrame</em>) – result of testing dataset.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>pandas.DataFrame</em> – predictions.</p></li>
+<li><p><em>int</em> – Score of model.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="houseValuePrediction.score.score_model">
+<span class="sig-prename descclassname"><span class="pre">houseValuePrediction.score.</span></span><span class="sig-name descname"><span class="pre">score_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_test</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_test</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/houseValuePrediction/score.html#score_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#houseValuePrediction.score.score_model" title="Permalink to this definition"></a></dt>
+<dd><p>Find score of trained model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model</strong> (<em>sklearn.ensemble.RandomForestRegressor</em>) – Trained Random forest model with grid search.</p></li>
+<li><p><strong>X_test</strong> (<em>pandas.DataFrame</em>) – features of testing dataset.</p></li>
+<li><p><strong>y_test</strong> (<em>pandas.DataFrame</em>) – result of testing dataset.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>pandas.DataFrame</em> – predictions.</p></li>
+<li><p><em>int</em> – Score of model.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-houseValuePrediction.train">
+<span id="housevalueprediction-train-module"></span><h2>houseValuePrediction.train module<a class="headerlink" href="#module-houseValuePrediction.train" title="Permalink to this headline"></a></h2>
+<p>Script for training preprocssed data and generating ML model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">param train-dataset</dt>
+<dd class="field-odd"><p>Processed training dataset.</p>
+</dd>
+<dt class="field-even">param log-level</dt>
+<dd class="field-even"><p>Mention priority of logs according to severity.</p>
+</dd>
+<dt class="field-odd">param log-path</dt>
+<dd class="field-odd"><p>Full path to a log file, if logs are to be written to a file.</p>
+</dd>
+<dt class="field-even">param no-console-log</dt>
+<dd class="field-even"><p>Whether or not to write logs to the console.</p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="houseValuePrediction.train.get_args">
+<span class="sig-prename descclassname"><span class="pre">houseValuePrediction.train.</span></span><span class="sig-name descname"><span class="pre">get_args</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/houseValuePrediction/train.html#get_args"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#houseValuePrediction.train.get_args" title="Permalink to this definition"></a></dt>
+<dd><p>Parse command line arugments.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>argparse.Namespace</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="houseValuePrediction.train.random_forest_grid_search">
+<span class="sig-prename descclassname"><span class="pre">houseValuePrediction.train.</span></span><span class="sig-name descname"><span class="pre">random_forest_grid_search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_train</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/houseValuePrediction/train.html#random_forest_grid_search"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#houseValuePrediction.train.random_forest_grid_search" title="Permalink to this definition"></a></dt>
+<dd><p>This function builds random forest model using grid search.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X_train</strong> (<em>pandas.DataFrame</em>) – Features of train dataset</p></li>
+<li><p><strong>y_train</strong> (<em>pandas.DataFrame</em>) – Labels for train dataset</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Best model with good accuracy.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>sklearn.ensemble.RandomForestRegressor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="houseValuePrediction.train.train_model">
+<span class="sig-prename descclassname"><span class="pre">houseValuePrediction.train.</span></span><span class="sig-name descname"><span class="pre">train_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_train</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_train</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_dst_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/houseValuePrediction/train.html#train_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#houseValuePrediction.train.train_model" title="Permalink to this definition"></a></dt>
+<dd><p>This function builds random forest model using grid search and store model in deault path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X_train</strong> (<em>pandas.DataFrame</em>) – Features of train dataset</p></li>
+<li><p><strong>y_train</strong> (<em>pandas.DataFrame</em>) – Labels for train dataset</p></li>
+<li><p><strong>model_dst_path</strong> (<em>string</em>) – Provide path where ML model will get store</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Best model with good accuracy.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>sklearn.ensemble.RandomForestRegressor</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-houseValuePrediction">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-houseValuePrediction" title="Permalink to this headline"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="src" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="main.html" class="btn btn-neutral float-right" title="main module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Saurabh Zinjad.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
