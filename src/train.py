@@ -1,5 +1,18 @@
-""" Script for training preprocssed data and generating ML model."""
+"""Script for training preprocssed data and generating ML model.
+
+Parameters
+----------
+train-dataset:
+    Processed training dataset.
+log-level: 
+    Mention priority of logs according to severity.
+log-path:
+    Full path to a log file, if logs are to be written to a file.
+no-console-log:
+    Whether or not to write logs to the console.
+"""
 import argparse
+import configparser
 import os
 
 import joblib
@@ -11,6 +24,13 @@ from sklearn.model_selection import GridSearchCV
 # Import custom logger
 from src import log_configurar
 
+# Configure default logger
+logger = log_configurar.configure_logger()
+
+# Read configuration
+config = configparser.ConfigParser()
+config.read("setup.cfg")
+
 
 def get_args():
     """Parse command line arugments.
@@ -21,19 +41,18 @@ def get_args():
 
     Returns
     -------
-    <class 'argparse.Namespace'>
-        parsed arguments
+    argparse.Namespace
     """
     parser = argparse.ArgumentParser()
 
     # model arguments
     parser.add_argument(
         "-td",
-        "--train_dataset",
+        "--train-dataset",
         help="Processed training dataset.",
-        default=os.path.join("data", "processed", "train_data.csv"),
+        default=config["params"]["OUTPUT_DATA_PROCESSED_TRAIN"],
     )
-    parser.add_argument("-mp", "--model_path", help="Where to store model.", default=os.path.join("artifacts"))
+    parser.add_argument("-mp", "--model_path", help="Where to store model.", default=config["params"]["ARTIFACTS_PATH"])
     parser.add_argument(
         "--log-level",
         default="DEBUG",
@@ -48,21 +67,24 @@ def get_args():
     )
 
     # parse arugments
-    try:
-        return parser.parse_args()
-    except SystemExit as se:
-        print(f"Unable to parse default argparse arguments. It may only occur for pytest. Here is error: {se}")
-        logger.warning(f"Unable to parse default argparse arguments. It may only occur for pytest. Here is error: {se}")
-        return parser.parse_args([])
-
-
-args = get_args()
-
-# Configure logger
-logger = log_configurar.configure_logger(log_file=args.log_path, console=args.no_console_log, log_level=args.log_level)
+    return parser.parse_args()
 
 
 def random_forest_grid_search(X_train, y_train):
+    """This function builds random forest model using grid search.
+    
+    Parameters
+    ----------
+    X_train: pandas.DataFrame
+        Features of train dataset
+    y_train: pandas.DataFrame
+        Labels for train dataset
+    
+    Returns
+    -------
+    sklearn.ensemble.RandomForestRegressor
+        Best model with good accuracy.
+    """
     param_grid = [
         # try 12 (3×4) combinations of hyperparameters
         {"n_estimators": [3, 10, 30], "max_features": [2, 4, 6, 8]},
@@ -86,6 +108,16 @@ def random_forest_grid_search(X_train, y_train):
 
 
 def train():
+    """This function run random forest function and store model in deault path.
+    
+    Parameters
+    ----------
+    None
+    
+    Returns
+    -------
+    store model in given path.
+    """
     # load data
     logger.debug("Loading training dataset.")
     train_data = pd.read_csv(args.train_dataset)
@@ -102,6 +134,13 @@ def train():
 
 
 if __name__ == "__main__":
+    args = get_args()
+
+    # Configure logger
+    logger = log_configurar.configure_logger(
+        log_file=args.log_path, console=args.no_console_log, log_level=args.log_level
+    )
+
     logger.debug("Start Training Phase =======")
     train()
     logger.debug("End Training Phase =======")

@@ -1,4 +1,16 @@
-""" Script for data collection, ingestion and preprocessing."""
+"""Script for data collection, ingestion and preprocessing.
+
+Parameters
+----------
+output-path:
+    Output folder to store processed, train and testdownloaded data.
+log-level: 
+    Mention priority of logs according to severity.
+log-path:
+    Full path to a log file, if logs are to be written to a file.
+no-console-log:
+    Whether or not to write logs to the console.
+"""
 import argparse
 import configparser
 import os
@@ -6,16 +18,23 @@ import tarfile
 
 import numpy as np
 import pandas as pd
-from six.moves import urllib
+from six.moves import urllib  # pyright: ignore
 from sklearn.impute import SimpleImputer
-from sklearn.model_selection import StratifiedShuffleSplit, train_test_split
+from sklearn.model_selection import StratifiedShuffleSplit
 
 # Import custom logger
 from src import log_configurar
 
+# Configure default logger
+logger = log_configurar.configure_logger()
+
 # Read configuration
 config = configparser.ConfigParser()
 config.read("setup.cfg")
+
+# Variable Initialization
+HOUSING_URL = ""
+HOUSING_PATH = ""
 
 
 def get_args():
@@ -27,14 +46,16 @@ def get_args():
 
     Returns
     -------
-    <class 'argparse.Namespace'>
-        parsed arguments
+    argparse.Namespace
     """
     parser = argparse.ArgumentParser()
 
     # model arguments
     parser.add_argument(
-        "-op", "--output-path", help="Output folder to store downloaded data.", default=os.path.join("data")
+        "-op",
+        "--output-path",
+        help="Output folder to store downloaded data.",
+        default=config["params"]["OUTPUT_DATA_PROCESSED"],
     )
     parser.add_argument(
         "--log-level",
@@ -46,26 +67,11 @@ def get_args():
         "-lp", "--log-path", help="Path where logs while get store", default=None,
     )
     parser.add_argument(
-        "-ncl", "--no-console-log", action="store_false", help=" whether or not to write logs to the console"
+        "-ncl", "--no-console-log", action="store_false", help="Whether or not to write logs to the console"
     )
 
     # parse arugments
-    try:
-        return parser.parse_args()
-    except SystemExit as se:
-        print(f"Unable to parse default argparse arguments. It may only occur for pytest. Here is error: {se}")
-        logger.warning(f"Unable to parse default argparse arguments. It may only occur for pytest. Here is error: {se}")
-        return parser.parse_args([])
-
-
-args = get_args()
-output_path = args.output_path if args.output_path else os.path.join("data")
-
-# Configure logger
-logger = log_configurar.configure_logger(log_file=args.log_path, console=args.no_console_log, log_level=args.log_level,)
-
-HOUSING_URL = config["data"]["housing-url"]
-HOUSING_PATH = os.path.join(output_path, "raw")
+    return parser.parse_args()
 
 
 def fetch_housing_data(housing_url=HOUSING_URL, housing_path=HOUSING_PATH):
@@ -102,7 +108,7 @@ def load_housing_data(housing_path=HOUSING_PATH):
 
     Returns
     -------
-    Pandas.DataFrame
+    pandas.DataFrame
         dataframe loaded with data from csv file
     """
     csv_path = os.path.join(housing_path, "housing.csv")
@@ -118,7 +124,7 @@ def data_preprocessing():
 
     Returns
     -------
-    pandas.dataframe
+    pandas.DataFrame
         Preprocessed dataframe
     """
 
@@ -153,13 +159,13 @@ def data_preprocessing():
 def save_train_test_data(
     train_data, test_data, store_path, train_csv_name="train_data.csv", test_csv_name="test_data.csv"
 ):
-    """Save given pandas.dataframe in given storage path with file_name
+    """Save given pandas.DataFrame in given storage path with file_name
 
     Parameters
     ----------
-    train_data: pandas.dataframe
+    train_data: pandas.DataFrame
         preprocessed train dataframe to store.
-    test_data: pandas.dataframe
+    test_data: pandas.DataFrame
         preprocessed test dataframe to store.
     store_path: string
         path where dataframe will get stored.
@@ -172,6 +178,7 @@ def save_train_test_data(
     -------
     None
     """
+    os.makedirs(store_path, exist_ok=True)
     train_data.to_csv(os.path.join(store_path, train_csv_name), index=False)
     test_data.to_csv(os.path.join(store_path, test_csv_name), index=False)
     return
@@ -186,9 +193,9 @@ def split_train_test_data():
 
     Returns
     -------
-    pandas.dataframe
+    pandas.DataFrame
         training dataset
-    pandas.dataframe 
+    pandas.DataFrame 
         testing dataset
     """
     processed_data = data_preprocessing()
@@ -207,7 +214,7 @@ def split_train_test_data():
         set_.drop("income_cat", axis=1, inplace=True)
 
     # storing processed dataset
-    store_path = os.path.join(output_path, "processed")
+    store_path = config["params"]["OUTPUT_DATA_PROCESSED"]
     logger.info(f'storing train and test processed dataset into path "{store_path}"')
     save_train_test_data(train_data=train_set, test_data=test_set, store_path=store_path)
     logger.debug("End of data collection and preprocessing step.")
@@ -220,6 +227,15 @@ def data_collection_preprocessing():
 
 
 if __name__ == "__main__":
+    args = get_args()
+    HOUSING_URL = config["params"]["HOUSING_URL"]
+    HOUSING_PATH = config["params"]["OUTPUT_DATA_RAW"]
+
+    # Configure logger
+    logger = log_configurar.configure_logger(
+        log_file=args.log_path, console=args.no_console_log, log_level=args.log_level,
+    )
+
     logger.debug("Start Data Collection & Preprocessing Phase =======")
     data_collection_preprocessing()
-    logger.debug("End Data Collection & Preprocessing Phase =======")
+    logger.debug("End Data Collection & Preprocessing Phase =========")

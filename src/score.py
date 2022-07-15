@@ -1,5 +1,18 @@
-""" Script for evalution score of trained model."""
+"""Script for evalution score of trained model.
+
+Parameters
+----------
+validation-dataset:
+    Processed validation dataset.
+log-level: 
+    Mention priority of logs according to severity.
+log-path:
+    Full path to a log file, if logs are to be written to a file.
+no-console-log:
+    Whether or not to write logs to the console.
+"""
 import argparse
+import configparser
 import os
 
 import joblib
@@ -9,6 +22,13 @@ from sklearn.metrics import mean_squared_error
 
 # Import custom logger
 from src import log_configurar
+
+# Configure default logger
+logger = log_configurar.configure_logger()
+
+# Read configuration
+config = configparser.ConfigParser()
+config.read("setup.cfg")
 
 
 def get_args():
@@ -20,21 +40,18 @@ def get_args():
 
     Returns
     -------
-    <class 'argparse.Namespace'>
-        parsed arguments
+    argparse.Namespace
     """
     parser = argparse.ArgumentParser()
 
     # model arguments
     parser.add_argument(
         "-vd",
-        "--validation_dataset",
+        "--validation-dataset",
         help="Processed validation dataset.",
-        default=os.path.join("data", "processed", "test_data.csv"),
+        default=config["params"]["OUTPUT_DATA_PROCESSED_TRAIN"],
     )
-    parser.add_argument(
-        "-mp", "--model_path", help="From Where to get model.", default=os.path.join("artifacts", "model.joblib")
-    )
+    parser.add_argument("-mp", "--model_path", help="From Where to get model.", default=config["params"]["MODEL_PATH"])
     parser.add_argument(
         "--log-level",
         default="DEBUG",
@@ -49,39 +66,27 @@ def get_args():
     )
 
     # parse arugments
-    try:
-        return parser.parse_args()
-    except SystemExit as se:
-        print(f"Unable to parse default argparse arguments. It may only occur for pytest. Here is error: {se}")
-        logger.warning(f"Unable to parse default argparse arguments. It may only occur for pytest. Here is error: {se}")
-        return parser.parse_args([])
-
-
-args = get_args()
-
-# Configure logger
-logger = log_configurar.configure_logger(log_file=args.log_path, console=args.no_console_log, log_level=args.log_level,)
+    return parser.parse_args()
 
 
 def predict_on_test_data(model, X_test, y_test):
-    """Predict test data on given model
+    """Predict test data on given model.
 
     Parameters
     ----------
     model: sklearn.ensemble.RandomForestRegressor
-        Trained Random forest model with grid search
+        Trained Random forest model with grid search.
     X_test: pandas.DataFrame
-        features of testing dataset
+        features of testing dataset.
     y_test: pandas.DataFrame
-        result of testing dataset
+        result of testing dataset.
 
     Returns
     -------
     pandas.DataFrame
-        predictions
+        predictions.
     int
-        Score of model
-    
+        Score of model.
     """
     logger.debug("Make prediction on validation dataset.")
     y_pred = model.predict(X_test)
@@ -96,7 +101,7 @@ def predict_on_test_data(model, X_test, y_test):
 
 
 def score():
-    """Find score of trained model
+    """Find score of trained model.
     
     Parameters
     ----------
@@ -125,6 +130,13 @@ def score():
 
 
 if __name__ == "__main__":
+    args = get_args()
+
+    # Configure logger
+    logger = log_configurar.configure_logger(
+        log_file=args.log_path, console=args.no_console_log, log_level=args.log_level
+    )
+
     logger.debug("Start Scoring Phase =======")
     score()
     logger.debug("End Scoring Phase =======")
