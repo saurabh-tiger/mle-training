@@ -1,3 +1,5 @@
 *.pyc
 *.csv
 datasets/
+logs/
+*.egg-info
