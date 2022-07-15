@@ -1,7 +1,7 @@
 import pandas as pd
 import pytest
 
-from src.ingest_data import data_preprocessing, load_housing_data
+from src.houseValuePrediction.ingest_data import data_preprocessing, load_housing_data
 
 
 def test_load_housing_data():

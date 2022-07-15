@@ -2,9 +2,9 @@ import pandas as pd
 import pytest
 import pytest_check as check
 
-from src.ingest_data import data_collection_preprocessing
-from src.score import predict_on_test_data
-from src.train import random_forest_grid_search
+from src.houseValuePrediction.ingest_data import data_collection_preprocessing
+from src.houseValuePrediction.score import predict_on_test_data
+from src.houseValuePrediction.train import random_forest_grid_search
 
 
 @pytest.fixture
