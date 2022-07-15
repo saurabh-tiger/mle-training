@@ -3,7 +3,6 @@ import argparse
 import configparser
 import os
 import tarfile
-from ast import parse
 
 import numpy as np
 import pandas as pd
