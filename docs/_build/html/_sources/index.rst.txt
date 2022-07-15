@@ -1,19 +1,16 @@
-.. mle_training_sz documentation master file, created by
-   sphinx-quickstart on Thu Jul 14 10:51:41 2022.
+.. House Price Prediction documentation master file, created by
+   sphinx-quickstart on Fri Jul 15 13:06:53 2022.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to mle_training_sz's documentation!
-===========================================
+Welcome to House Price Prediction's documentation!
+==================================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-      Chapter 1
-      Chapter 2
-      Chapter 3
-
+   modules
 
 Indices and tables
 ==================

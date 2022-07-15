@@ -1,15 +1,18 @@
+import configparser
 import logging
 import logging.config
 
+# Read configuration
+config = configparser.ConfigParser()
+config.read("setup.cfg")
+
+# TODO: Find way to move this configurations into Setup.cfg
+LOG_FORMAT = "%(asctime)s [%(levelname)s] %(filename)s:%(lineno)d:%(funcName)s - %(message)s"
+DATE_FMT = "%Y-%m-%d %H:%M:%S"
 LOGGING_DEFAULT_CONFIG = {
     "version": 1,
     "disable_existing_loggers": True,
-    "formatters": {
-        "default_formatter": {
-            "format": "%(asctime)s [%(levelname)s] %(filename)s:%(lineno)d:%(funcName)s - %(message)s",
-            "datefmt": "%Y-%m-%d %H:%M:%S",
-        }
-    },
+    "formatters": {"default_formatter": {"format": LOG_FORMAT, "datefmt": DATE_FMT,}},
     "handlers": {
         "consoleHandler": {
             "level": "NOTSET",
@@ -21,17 +24,10 @@ LOGGING_DEFAULT_CONFIG = {
             "level": "NOTSET",
             "class": "logging.FileHandler",
             "formatter": "default_formatter",
-            "filename": "logs/default.log",
+            "filename": "/home/saurabhzinjad/drive/mle-training-repo/logs/default.log",
         },
     },
-    "loggers": {
-        "": {
-            "level": "NOTSET",
-            "handlers": [
-                # "consoleHandler", "fileHandler"
-            ],
-        },
-    },
+    "loggers": {"": {"level": "NOTSET", "handlers": ["consoleHandler", "fileHandler"],},},
 }
 
 
@@ -42,17 +38,17 @@ def configure_logger(logger=None, cfg=None, log_file=None, console=True, log_lev
 
     Parameters
     ----------
-        logger:
-            Predefined logger object if present. If None a ew logger object will be created from root.
-        cfg: dict()
-            Configuration of the logging to be implemented by default
-        log_file: str
-            Path to the log file for logs to be stored
-        console: bool
-            To include a console handler(logs printing in console)
-        log_level: str
-            One of `["INFO","DEBUG","WARNING","ERROR","CRITICAL"]`
-            default - `"DEBUG"`
+    logger:
+        Predefined logger object if present. If None a ew logger object will be created from root.
+    cfg: dict()
+        Configuration of the logging to be implemented by default
+    log_file: str
+        Path to the log file for logs to be stored
+    console: bool
+        To include a console handler(logs printing in console)
+    log_level: str
+        One of `["INFO","DEBUG","WARNING","ERROR","CRITICAL"]`
+        default - `"DEBUG"`
 
     Returns
     -------
@@ -65,12 +61,10 @@ def configure_logger(logger=None, cfg=None, log_file=None, console=True, log_lev
 
     logger = logger or logging.getLogger()
 
-    if log_file or console:
-        formatter = logging.Formatter(
-            "%(asctime)s [%(levelname)s] %(filename)s - %(funcName)s - %(message)s", datefmt="%Y-%m-%d %H:%M:%S"
-        )
-        for hdlr in logger.handlers:
-            logger.removeHandler(hdlr)
+    if log_file or not console:
+        formatter = logging.Formatter(fmt=LOG_FORMAT, datefmt=DATE_FMT,)
+        # remove all handlers
+        logger.handlers = []
 
         if log_file:
             fh = logging.FileHandler(log_file)
