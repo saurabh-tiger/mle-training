@@ -38,8 +38,10 @@ python setup.py sdist bdist_wheel
 - [x] Commented out visualization and correlation
 - [x] Didn't see the use of compare_props, so commented it as well.
 - [ ] Logger code seems redundant for every module.
-
+- [ ] Need do this ```from src import log_configurar``` instead of ```import log_configurar```.
+- [ ] How can I move logging_default_config from src/log_configurar to setup.cfg file   
 ## Ignore
+- [Writing Test Cases for Machine Learning systems.](https://www.analyticsvidhya.com/blog/2022/01/writing-test-cases-for-machine-learning/)
 ```ini
 # Log-configuration.ini
 [loggers]
