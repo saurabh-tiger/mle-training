@@ -16,13 +16,14 @@ import configparser
 import os
 
 import joblib
+import mlflow
 import numpy as np
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import GridSearchCV
 
 # Import custom logger
-from src.houseValuePrediction import log_configurar
+from houseValuePrediction import log_configurar
 
 # Configure default logger
 logger = log_configurar.configure_logger()
@@ -140,6 +141,9 @@ def train_model(X_train=None, y_train=None, model_dst_path: str = None):
         y_train = train_data["median_house_value"].copy()
 
     final_model = random_forest_grid_search(X_train, y_train)
+
+    mlflow.log_param("algorithm", "Random Forest")
+    mlflow.sklearn.log_model(final_model, "model")
 
     model_path = model_dst_path if model_dst_path else args.model_path
     logger.info(f'Stored train model at: "{model_path}"')

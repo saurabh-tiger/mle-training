@@ -1,0 +1,15 @@
+artifact_uri: artifacts/mlruns/0/ddf04eb8de234120aac96516319b9d9a/artifacts
+end_time: 1659427244522
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: ddf04eb8de234120aac96516319b9d9a
+run_uuid: ddf04eb8de234120aac96516319b9d9a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1659427202440
+status: 3
+tags: []
+user_id: saurabhzinjad

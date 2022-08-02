@@ -16,13 +16,14 @@ import configparser
 import os
 
 import joblib
+import mlflow
 import numpy as np
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error
 
 # Import custom logger
-from src.houseValuePrediction import log_configurar
+from houseValuePrediction import log_configurar
 
 # Configure default logger
 logger = log_configurar.configure_logger()
@@ -141,6 +142,7 @@ def score_model(model=None, X_test=None, y_test=None):
 
     predictions, score = predict_on_test_data(final_model, X_test, y_test)
     logger.info(f"final RMSE Score: {score}")
+    mlflow.log_metrics({"rmse": score})
     return predictions, score
 
 
