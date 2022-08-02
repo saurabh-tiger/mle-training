@@ -16,6 +16,7 @@ import configparser
 import os
 import tarfile
 
+import mlflow
 import numpy as np
 import pandas as pd
 from six.moves import urllib  # pyright: ignore
@@ -23,7 +24,7 @@ from sklearn.impute import SimpleImputer
 from sklearn.model_selection import StratifiedShuffleSplit
 
 # Import custom logger
-from src.houseValuePrediction import log_configurar
+from houseValuePrediction import log_configurar
 
 # Configure default logger
 logger = log_configurar.configure_logger()
@@ -219,6 +220,7 @@ def split_train_test_data(output_path=None):
     store_path = output_path if output_path else config["params"]["OUTPUT_DATA_PROCESSED"]
     logger.info(f'storing train and test processed dataset into path "{store_path}"')
     save_train_test_data(train_data=train_set, test_data=test_set, store_path=store_path)
+    mlflow.log_artifacts(store_path)
     logger.debug("End of data collection and preprocessing step.")
     return train_set, test_set
 
