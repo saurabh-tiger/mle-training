@@ -114,7 +114,7 @@ def random_forest_grid_search(X_train, y_train):
     return final_model
 
 
-def train_model(X_train=None, y_train=None, model_dst_path: str = "artifacts/model.joblib"):
+def train_model(X_train=None, y_train=None, model_dst_path: str = None):
     """This function builds random forest model using grid search and store model in deault path.
     
     Parameters
@@ -145,10 +145,10 @@ def train_model(X_train=None, y_train=None, model_dst_path: str = "artifacts/mod
     mlflow.log_param("algorithm", "Random Forest")
     mlflow.sklearn.log_model(final_model, "model")
 
-    os.makedirs(os.path.dirname(model_dst_path), exist_ok=True)
-    # model_dst_path = model_dst_path if model_dst_path else args.model_path
-    logger.info(f'Stored train model at: "{model_dst_path}"')
-    joblib.dump(final_model, model_dst_path)
+    model_path = model_dst_path
+    # model_path = model_dst_path if model_dst_path else args.model_path
+    logger.info(f'Stored train model at: "{model_path}"')
+    joblib.dump(final_model, model_path)
 
     return final_model
 

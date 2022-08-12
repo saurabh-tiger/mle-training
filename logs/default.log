@@ -1,297 +1,69 @@
-2022-07-15 18:30:26 [DEBUG] main.py:66:<module> - ================ Start of ML Workflow ================
-2022-07-15 18:30:26 [DEBUG] ingest_data.py:133:data_preprocessing - Fetching and loading dataset
-2022-07-15 18:30:27 [DEBUG] ingest_data.py:142:data_preprocessing - Handling missing values.
-2022-07-15 18:30:27 [DEBUG] ingest_data.py:149:data_preprocessing - Preprocessing the dataset.
-2022-07-15 18:30:27 [DEBUG] ingest_data.py:206:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
-2022-07-15 18:30:27 [INFO] ingest_data.py:220:split_train_test_data - storing train and test processed dataset into path "data/processed/"
-2022-07-15 18:30:27 [DEBUG] ingest_data.py:222:split_train_test_data - End of data collection and preprocessing step.
-2022-07-15 18:30:27 [DEBUG] train.py:132:train_model - Loading training dataset.
-2022-07-15 18:35:14 [DEBUG] main.py:66:<module> - ================ Start of ML Workflow ================
-2022-07-15 18:35:14 [DEBUG] ingest_data.py:133:data_preprocessing - Fetching and loading dataset
-2022-07-15 18:35:14 [DEBUG] ingest_data.py:142:data_preprocessing - Handling missing values.
-2022-07-15 18:35:14 [DEBUG] ingest_data.py:149:data_preprocessing - Preprocessing the dataset.
-2022-07-15 18:35:14 [DEBUG] ingest_data.py:206:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
-2022-07-15 18:35:14 [INFO] ingest_data.py:220:split_train_test_data - storing train and test processed dataset into path "data/processed/"
-2022-07-15 18:35:14 [DEBUG] ingest_data.py:222:split_train_test_data - End of data collection and preprocessing step.
-2022-07-15 18:35:14 [DEBUG] train.py:131:train_model - Loading training dataset.
-2022-07-15 18:36:58 [DEBUG] main.py:66:<module> - ================ Start of ML Workflow ================
-2022-07-15 18:36:58 [DEBUG] ingest_data.py:133:data_preprocessing - Fetching and loading dataset
-2022-07-15 18:36:59 [DEBUG] ingest_data.py:142:data_preprocessing - Handling missing values.
-2022-07-15 18:36:59 [DEBUG] ingest_data.py:149:data_preprocessing - Preprocessing the dataset.
-2022-07-15 18:36:59 [DEBUG] ingest_data.py:206:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
-2022-07-15 18:36:59 [INFO] ingest_data.py:220:split_train_test_data - storing train and test processed dataset into path "data/processed/"
-2022-07-15 18:36:59 [DEBUG] ingest_data.py:222:split_train_test_data - End of data collection and preprocessing step.
-2022-07-15 18:36:59 [DEBUG] train.py:131:train_model - Loading training dataset.
-2022-07-15 18:37:19 [DEBUG] main.py:66:<module> - ================ Start of ML Workflow ================
-2022-07-15 18:37:19 [DEBUG] ingest_data.py:133:data_preprocessing - Fetching and loading dataset
-2022-07-15 18:37:20 [DEBUG] ingest_data.py:142:data_preprocessing - Handling missing values.
-2022-07-15 18:37:20 [DEBUG] ingest_data.py:149:data_preprocessing - Preprocessing the dataset.
-2022-07-15 18:37:20 [DEBUG] ingest_data.py:206:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
-2022-07-15 18:37:20 [INFO] ingest_data.py:220:split_train_test_data - storing train and test processed dataset into path "data/processed/"
-2022-07-15 18:37:20 [DEBUG] ingest_data.py:222:split_train_test_data - End of data collection and preprocessing step.
-2022-07-15 18:37:20 [DEBUG] train.py:131:train_model - Loading training dataset.
-2022-07-15 18:38:20 [DEBUG] main.py:66:<module> - ================ Start of ML Workflow ================
-2022-07-15 18:38:20 [DEBUG] ingest_data.py:133:data_preprocessing - Fetching and loading dataset
-2022-07-15 18:38:20 [DEBUG] ingest_data.py:142:data_preprocessing - Handling missing values.
-2022-07-15 18:38:20 [DEBUG] ingest_data.py:149:data_preprocessing - Preprocessing the dataset.
-2022-07-15 18:38:20 [DEBUG] ingest_data.py:206:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
-2022-07-15 18:38:20 [INFO] ingest_data.py:220:split_train_test_data - storing train and test processed dataset into path "data/processed/"
-2022-07-15 18:38:20 [DEBUG] ingest_data.py:222:split_train_test_data - End of data collection and preprocessing step.
-2022-07-15 18:38:20 [DEBUG] train.py:131:train_model - Loading training dataset.
-2022-07-15 18:38:49 [DEBUG] main.py:66:<module> - ================ Start of ML Workflow ================
-2022-07-15 18:38:49 [DEBUG] ingest_data.py:133:data_preprocessing - Fetching and loading dataset
-2022-07-15 18:38:50 [DEBUG] ingest_data.py:142:data_preprocessing - Handling missing values.
-2022-07-15 18:38:50 [DEBUG] ingest_data.py:149:data_preprocessing - Preprocessing the dataset.
-2022-07-15 18:38:50 [DEBUG] ingest_data.py:206:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
-2022-07-15 18:38:50 [INFO] ingest_data.py:220:split_train_test_data - storing train and test processed dataset into path "data/processed/"
-2022-07-15 18:38:50 [DEBUG] ingest_data.py:222:split_train_test_data - End of data collection and preprocessing step.
-2022-07-15 18:38:50 [DEBUG] train.py:131:train_model - Loading training dataset.
-2022-07-15 18:39:14 [DEBUG] main.py:66:<module> - ================ Start of ML Workflow ================
-2022-07-15 18:39:14 [DEBUG] ingest_data.py:133:data_preprocessing - Fetching and loading dataset
-2022-07-15 18:39:14 [DEBUG] ingest_data.py:142:data_preprocessing - Handling missing values.
-2022-07-15 18:39:14 [DEBUG] ingest_data.py:149:data_preprocessing - Preprocessing the dataset.
-2022-07-15 18:39:14 [DEBUG] ingest_data.py:206:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
-2022-07-15 18:39:14 [INFO] ingest_data.py:220:split_train_test_data - storing train and test processed dataset into path "data/processed/"
-2022-07-15 18:39:14 [DEBUG] ingest_data.py:222:split_train_test_data - End of data collection and preprocessing step.
-2022-07-15 18:39:14 [DEBUG] train.py:131:train_model - Loading training dataset.
-2022-07-15 18:40:58 [DEBUG] main.py:66:<module> - ================ Start of ML Workflow ================
-2022-07-15 18:40:58 [DEBUG] ingest_data.py:133:data_preprocessing - Fetching and loading dataset
-2022-07-15 18:40:59 [DEBUG] ingest_data.py:142:data_preprocessing - Handling missing values.
-2022-07-15 18:40:59 [DEBUG] ingest_data.py:149:data_preprocessing - Preprocessing the dataset.
-2022-07-15 18:40:59 [DEBUG] ingest_data.py:206:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
-2022-07-15 18:40:59 [INFO] ingest_data.py:220:split_train_test_data - storing train and test processed dataset into path "data/processed/"
-2022-07-15 18:40:59 [DEBUG] ingest_data.py:222:split_train_test_data - End of data collection and preprocessing step.
-2022-07-15 18:40:59 [DEBUG] train.py:131:train_model - Loading training dataset.
-2022-07-15 18:41:33 [DEBUG] main.py:66:<module> - ================ Start of ML Workflow ================
-2022-07-15 18:41:33 [DEBUG] ingest_data.py:133:data_preprocessing - Fetching and loading dataset
-2022-07-15 18:41:33 [DEBUG] ingest_data.py:142:data_preprocessing - Handling missing values.
-2022-07-15 18:41:33 [DEBUG] ingest_data.py:149:data_preprocessing - Preprocessing the dataset.
-2022-07-15 18:41:33 [DEBUG] ingest_data.py:206:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
-2022-07-15 18:41:33 [INFO] ingest_data.py:220:split_train_test_data - storing train and test processed dataset into path "data/processed/"
-2022-07-15 18:41:33 [DEBUG] ingest_data.py:222:split_train_test_data - End of data collection and preprocessing step.
-2022-07-15 18:41:33 [DEBUG] train.py:131:train_model - Loading training dataset.
-2022-07-15 18:42:13 [DEBUG] main.py:66:<module> - ================ Start of ML Workflow ================
-2022-07-15 18:42:13 [DEBUG] ingest_data.py:133:data_preprocessing - Fetching and loading dataset
-2022-07-15 18:42:13 [DEBUG] ingest_data.py:142:data_preprocessing - Handling missing values.
-2022-07-15 18:42:13 [DEBUG] ingest_data.py:149:data_preprocessing - Preprocessing the dataset.
-2022-07-15 18:42:13 [DEBUG] ingest_data.py:206:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
-2022-07-15 18:42:13 [INFO] ingest_data.py:220:split_train_test_data - storing train and test processed dataset into path "data/processed/"
-2022-07-15 18:42:13 [DEBUG] ingest_data.py:222:split_train_test_data - End of data collection and preprocessing step.
-2022-07-15 18:42:13 [DEBUG] train.py:131:train_model - Loading training dataset.
-2022-07-15 18:47:44 [DEBUG] main.py:66:<module> - ================ Start of ML Workflow ================
-2022-07-15 18:47:44 [DEBUG] ingest_data.py:133:data_preprocessing - Fetching and loading dataset
-2022-07-15 18:47:44 [DEBUG] ingest_data.py:142:data_preprocessing - Handling missing values.
-2022-07-15 18:47:44 [DEBUG] ingest_data.py:149:data_preprocessing - Preprocessing the dataset.
-2022-07-15 18:47:44 [DEBUG] ingest_data.py:206:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
-2022-07-15 18:47:44 [INFO] ingest_data.py:220:split_train_test_data - storing train and test processed dataset into path "data/processed/"
-2022-07-15 18:47:45 [DEBUG] ingest_data.py:222:split_train_test_data - End of data collection and preprocessing step.
-2022-07-15 18:47:45 [DEBUG] train.py:134:train_model - Loading training dataset.
-2022-07-15 18:48:23 [DEBUG] main.py:66:<module> - ================ Start of ML Workflow ================
-2022-07-15 18:48:23 [DEBUG] ingest_data.py:133:data_preprocessing - Fetching and loading dataset
-2022-07-15 18:48:23 [DEBUG] ingest_data.py:142:data_preprocessing - Handling missing values.
-2022-07-15 18:48:23 [DEBUG] ingest_data.py:149:data_preprocessing - Preprocessing the dataset.
-2022-07-15 18:48:23 [DEBUG] ingest_data.py:206:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
-2022-07-15 18:48:23 [INFO] ingest_data.py:220:split_train_test_data - storing train and test processed dataset into path "data/processed/"
-2022-07-15 18:48:23 [DEBUG] ingest_data.py:222:split_train_test_data - End of data collection and preprocessing step.
-2022-07-15 18:48:23 [DEBUG] train.py:134:train_model - Loading training dataset.
-2022-07-15 18:49:56 [DEBUG] main.py:66:<module> - ================ Start of ML Workflow ================
-2022-07-15 18:49:56 [DEBUG] ingest_data.py:133:data_preprocessing - Fetching and loading dataset
-2022-07-15 18:49:56 [DEBUG] ingest_data.py:142:data_preprocessing - Handling missing values.
-2022-07-15 18:49:56 [DEBUG] ingest_data.py:149:data_preprocessing - Preprocessing the dataset.
-2022-07-15 18:49:56 [DEBUG] ingest_data.py:206:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
-2022-07-15 18:49:56 [INFO] ingest_data.py:220:split_train_test_data - storing train and test processed dataset into path "data/processed/"
-2022-07-15 18:49:56 [DEBUG] ingest_data.py:222:split_train_test_data - End of data collection and preprocessing step.
-2022-07-15 18:49:56 [DEBUG] train.py:134:train_model - Loading training dataset.
-2022-07-15 18:50:17 [DEBUG] main.py:66:<module> - ================ Start of ML Workflow ================
-2022-07-15 18:50:17 [DEBUG] ingest_data.py:133:data_preprocessing - Fetching and loading dataset
-2022-07-15 18:50:17 [DEBUG] ingest_data.py:142:data_preprocessing - Handling missing values.
-2022-07-15 18:50:17 [DEBUG] ingest_data.py:149:data_preprocessing - Preprocessing the dataset.
-2022-07-15 18:50:17 [DEBUG] ingest_data.py:206:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
-2022-07-15 18:50:17 [INFO] ingest_data.py:220:split_train_test_data - storing train and test processed dataset into path "data/processed/"
-2022-07-15 18:50:17 [DEBUG] ingest_data.py:222:split_train_test_data - End of data collection and preprocessing step.
-2022-07-15 18:50:17 [DEBUG] train.py:134:train_model - Loading training dataset.
-2022-07-15 18:50:49 [DEBUG] main.py:66:<module> - ================ Start of ML Workflow ================
-2022-07-15 18:50:49 [DEBUG] ingest_data.py:133:data_preprocessing - Fetching and loading dataset
-2022-07-15 18:50:49 [DEBUG] ingest_data.py:142:data_preprocessing - Handling missing values.
-2022-07-15 18:50:49 [DEBUG] ingest_data.py:149:data_preprocessing - Preprocessing the dataset.
-2022-07-15 18:50:49 [DEBUG] ingest_data.py:206:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
-2022-07-15 18:50:49 [INFO] ingest_data.py:220:split_train_test_data - storing train and test processed dataset into path "data/processed/"
-2022-07-15 18:50:49 [DEBUG] ingest_data.py:222:split_train_test_data - End of data collection and preprocessing step.
-2022-07-15 18:50:49 [DEBUG] train.py:134:train_model - Loading training dataset.
-2022-07-15 18:52:04 [DEBUG] main.py:66:<module> - ================ Start of ML Workflow ================
-2022-07-15 18:52:04 [DEBUG] ingest_data.py:133:data_preprocessing - Fetching and loading dataset
-2022-07-15 18:52:04 [DEBUG] ingest_data.py:142:data_preprocessing - Handling missing values.
-2022-07-15 18:52:04 [DEBUG] ingest_data.py:149:data_preprocessing - Preprocessing the dataset.
-2022-07-15 18:52:04 [DEBUG] ingest_data.py:206:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
-2022-07-15 18:52:04 [INFO] ingest_data.py:220:split_train_test_data - storing train and test processed dataset into path "data/processed/"
-2022-07-15 18:52:04 [DEBUG] ingest_data.py:222:split_train_test_data - End of data collection and preprocessing step.
-2022-07-15 18:52:04 [DEBUG] train.py:134:train_model - Loading training dataset.
-2022-07-15 18:52:04 [DEBUG] train.py:99:random_forest_grid_search - Model training with Grid search.
-2022-07-15 18:52:37 [INFO] train.py:145:train_model - Stored train model at: "artifacts/model.joblib"
-2022-07-15 18:52:37 [DEBUG] score.py:123:score_model - Loading validation dataset.
-2022-07-15 18:56:28 [DEBUG] main.py:66:<module> - ================ Start of ML Workflow ================
-2022-07-15 18:56:28 [DEBUG] ingest_data.py:133:data_preprocessing - Fetching and loading dataset
-2022-07-15 18:56:29 [DEBUG] ingest_data.py:142:data_preprocessing - Handling missing values.
-2022-07-15 18:56:29 [DEBUG] ingest_data.py:149:data_preprocessing - Preprocessing the dataset.
-2022-07-15 18:56:29 [DEBUG] ingest_data.py:206:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
-2022-07-15 18:56:29 [INFO] ingest_data.py:220:split_train_test_data - storing train and test processed dataset into path "data/processed/"
-2022-07-15 18:56:29 [DEBUG] ingest_data.py:222:split_train_test_data - End of data collection and preprocessing step.
-2022-07-15 18:56:29 [DEBUG] train.py:134:train_model - Loading training dataset.
-2022-07-15 18:56:29 [DEBUG] train.py:99:random_forest_grid_search - Model training with Grid search.
-2022-07-15 18:57:02 [INFO] train.py:145:train_model - Stored train model at: "artifacts/model.joblib"
-2022-07-15 18:57:02 [DEBUG] score.py:126:score_model - Loading validation dataset.
-2022-07-15 18:59:34 [DEBUG] main.py:66:<module> - ================ Start of ML Workflow ================
-2022-07-15 18:59:34 [DEBUG] ingest_data.py:133:data_preprocessing - Fetching and loading dataset
-2022-07-15 18:59:34 [DEBUG] ingest_data.py:142:data_preprocessing - Handling missing values.
-2022-07-15 18:59:34 [DEBUG] ingest_data.py:149:data_preprocessing - Preprocessing the dataset.
-2022-07-15 18:59:34 [DEBUG] ingest_data.py:206:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
-2022-07-15 18:59:34 [INFO] ingest_data.py:220:split_train_test_data - storing train and test processed dataset into path "data/processed/"
-2022-07-15 18:59:35 [DEBUG] ingest_data.py:222:split_train_test_data - End of data collection and preprocessing step.
-2022-07-15 18:59:35 [DEBUG] train.py:134:train_model - Loading training dataset.
-2022-07-15 18:59:35 [DEBUG] train.py:99:random_forest_grid_search - Model training with Grid search.
-2022-07-15 19:00:07 [INFO] train.py:145:train_model - Stored train model at: "artifacts/model.joblib"
-2022-07-15 19:00:07 [DEBUG] score.py:127:score_model - Loading validation dataset.
-2022-07-15 19:00:49 [DEBUG] main.py:66:<module> - ================ Start of ML Workflow ================
-2022-07-15 19:00:49 [DEBUG] ingest_data.py:133:data_preprocessing - Fetching and loading dataset
-2022-07-15 19:00:49 [DEBUG] ingest_data.py:142:data_preprocessing - Handling missing values.
-2022-07-15 19:00:49 [DEBUG] ingest_data.py:149:data_preprocessing - Preprocessing the dataset.
-2022-07-15 19:00:49 [DEBUG] ingest_data.py:206:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
-2022-07-15 19:00:49 [INFO] ingest_data.py:220:split_train_test_data - storing train and test processed dataset into path "data/processed/"
-2022-07-15 19:00:50 [DEBUG] ingest_data.py:222:split_train_test_data - End of data collection and preprocessing step.
-2022-07-15 19:00:50 [DEBUG] train.py:134:train_model - Loading training dataset.
-2022-07-15 19:00:50 [DEBUG] train.py:99:random_forest_grid_search - Model training with Grid search.
-2022-07-15 19:01:23 [INFO] train.py:145:train_model - Stored train model at: "artifacts/model.joblib"
-2022-07-15 19:01:23 [DEBUG] score.py:127:score_model - Loading validation dataset.
-2022-07-15 19:01:39 [DEBUG] main.py:66:<module> - ================ Start of ML Workflow ================
-2022-07-15 19:01:39 [DEBUG] ingest_data.py:133:data_preprocessing - Fetching and loading dataset
-2022-07-15 19:01:40 [DEBUG] ingest_data.py:142:data_preprocessing - Handling missing values.
-2022-07-15 19:01:40 [DEBUG] ingest_data.py:149:data_preprocessing - Preprocessing the dataset.
-2022-07-15 19:01:40 [DEBUG] ingest_data.py:206:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
-2022-07-15 19:01:40 [INFO] ingest_data.py:220:split_train_test_data - storing train and test processed dataset into path "data/processed/"
-2022-07-15 19:01:40 [DEBUG] ingest_data.py:222:split_train_test_data - End of data collection and preprocessing step.
-2022-07-15 19:01:40 [DEBUG] train.py:134:train_model - Loading training dataset.
-2022-07-15 19:01:40 [DEBUG] train.py:99:random_forest_grid_search - Model training with Grid search.
-2022-07-15 19:02:12 [INFO] train.py:145:train_model - Stored train model at: "artifacts/model.joblib"
-2022-07-15 19:02:12 [DEBUG] score.py:127:score_model - Loading validation dataset.
-2022-07-15 19:02:12 [DEBUG] score.py:137:score_model - Load trained model.
-2022-07-15 19:02:12 [DEBUG] score.py:96:predict_on_test_data - Make prediction on validation dataset.
-2022-07-15 19:02:12 [INFO] score.py:143:score_model - final RMSE Score: 47464.65766857914
-2022-07-15 19:02:12 [INFO] main.py:77:<module> - Score of RF model is 47464.65766857914
-2022-07-15 19:02:12 [DEBUG] main.py:79:<module> - ================ End of ML Workflow ================
-2022-08-02 12:58:19 [DEBUG] cmd.py:870:execute - Popen(['git', 'version'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=None)
-2022-08-02 12:58:19 [DEBUG] cmd.py:870:execute - Popen(['git', 'version'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=None)
-2022-08-02 12:58:19 [DEBUG] cmd.py:870:execute - Popen(['git', 'cat-file', '--batch-check'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=<valid stream>)
-2022-08-02 12:58:19 [DEBUG] main.py:71:<module> - ================ Start of ML Workflow ================
-2022-08-02 12:58:19 [DEBUG] ingest_data.py:133:data_preprocessing - Fetching and loading dataset
-2022-08-02 13:00:24 [DEBUG] cmd.py:870:execute - Popen(['git', 'version'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=None)
-2022-08-02 13:00:24 [DEBUG] cmd.py:870:execute - Popen(['git', 'version'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=None)
-2022-08-02 13:00:24 [DEBUG] cmd.py:870:execute - Popen(['git', 'cat-file', '--batch-check'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=<valid stream>)
-2022-08-02 13:00:24 [DEBUG] main.py:71:<module> - ================ Start of ML Workflow ================
-2022-08-02 13:00:24 [DEBUG] ingest_data.py:133:data_preprocessing - Fetching and loading dataset
-2022-08-02 13:00:25 [DEBUG] ingest_data.py:142:data_preprocessing - Handling missing values.
-2022-08-02 13:00:25 [DEBUG] ingest_data.py:149:data_preprocessing - Preprocessing the dataset.
-2022-08-02 13:00:25 [DEBUG] ingest_data.py:206:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
-2022-08-02 13:00:25 [INFO] ingest_data.py:220:split_train_test_data - storing train and test processed dataset into path "data/processed/"
-2022-08-02 13:00:25 [DEBUG] ingest_data.py:222:split_train_test_data - End of data collection and preprocessing step.
-2022-08-02 13:00:25 [DEBUG] train.py:134:train_model - Loading training dataset.
-2022-08-02 13:00:25 [DEBUG] train.py:99:random_forest_grid_search - Model training with Grid search.
-2022-08-02 13:01:03 [INFO] train.py:145:train_model - Stored train model at: "artifacts/model.joblib"
-2022-08-02 13:01:03 [DEBUG] score.py:127:score_model - Loading validation dataset.
-2022-08-02 13:01:03 [DEBUG] score.py:137:score_model - Load trained model.
-2022-08-02 13:01:03 [DEBUG] score.py:96:predict_on_test_data - Make prediction on validation dataset.
-2022-08-02 13:01:03 [INFO] score.py:143:score_model - final RMSE Score: 47464.65766857914
-2022-08-02 13:01:03 [INFO] main.py:95:<module> - Score of RF model is 47464.65766857914
-2022-08-02 13:01:03 [DEBUG] main.py:97:<module> - ================ End of ML Workflow ================
-2022-08-02 13:03:48 [DEBUG] cmd.py:870:execute - Popen(['git', 'version'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=None)
-2022-08-02 13:03:48 [DEBUG] cmd.py:870:execute - Popen(['git', 'version'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=None)
-2022-08-02 13:03:48 [DEBUG] cmd.py:870:execute - Popen(['git', 'cat-file', '--batch-check'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=<valid stream>)
-2022-08-02 13:03:48 [DEBUG] main.py:71:<module> - ================ Start of ML Workflow ================
-2022-08-02 13:03:48 [DEBUG] ingest_data.py:133:data_preprocessing - Fetching and loading dataset
-2022-08-02 13:03:48 [DEBUG] ingest_data.py:142:data_preprocessing - Handling missing values.
-2022-08-02 13:03:48 [DEBUG] ingest_data.py:149:data_preprocessing - Preprocessing the dataset.
-2022-08-02 13:03:48 [DEBUG] ingest_data.py:206:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
-2022-08-02 13:03:48 [INFO] ingest_data.py:220:split_train_test_data - storing train and test processed dataset into path "data/processed/"
-2022-08-02 13:03:48 [DEBUG] ingest_data.py:222:split_train_test_data - End of data collection and preprocessing step.
-2022-08-02 13:03:48 [DEBUG] train.py:134:train_model - Loading training dataset.
-2022-08-02 13:03:48 [DEBUG] train.py:99:random_forest_grid_search - Model training with Grid search.
-2022-08-02 13:04:27 [INFO] train.py:145:train_model - Stored train model at: "artifacts/model.joblib"
-2022-08-02 13:20:46 [DEBUG] cmd.py:870:execute - Popen(['git', 'version'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=None)
-2022-08-02 13:20:46 [DEBUG] cmd.py:870:execute - Popen(['git', 'version'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=None)
-2022-08-02 13:20:46 [DEBUG] cmd.py:870:execute - Popen(['git', 'cat-file', '--batch-check'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=<valid stream>)
-2022-08-02 13:20:46 [DEBUG] main.py:71:<module> - ================ Start of ML Workflow ================
-2022-08-02 13:20:46 [DEBUG] ingest_data.py:134:data_preprocessing - Fetching and loading dataset
-2022-08-02 13:20:46 [DEBUG] ingest_data.py:143:data_preprocessing - Handling missing values.
-2022-08-02 13:20:46 [DEBUG] ingest_data.py:150:data_preprocessing - Preprocessing the dataset.
-2022-08-02 13:20:46 [DEBUG] ingest_data.py:207:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
-2022-08-02 13:20:46 [INFO] ingest_data.py:221:split_train_test_data - storing train and test processed dataset into path "data/processed/"
-2022-08-02 13:20:46 [DEBUG] ingest_data.py:224:split_train_test_data - End of data collection and preprocessing step.
-2022-08-02 13:20:47 [DEBUG] train.py:135:train_model - Loading training dataset.
-2022-08-02 13:20:47 [DEBUG] train.py:100:random_forest_grid_search - Model training with Grid search.
-2022-08-02 13:21:28 [INFO] train.py:149:train_model - Stored train model at: "artifacts/model.joblib"
-2022-08-02 13:22:42 [DEBUG] cmd.py:870:execute - Popen(['git', 'version'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=None)
-2022-08-02 13:22:42 [DEBUG] cmd.py:870:execute - Popen(['git', 'version'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=None)
-2022-08-02 13:22:42 [DEBUG] cmd.py:870:execute - Popen(['git', 'cat-file', '--batch-check'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=<valid stream>)
-2022-08-02 13:23:17 [DEBUG] cmd.py:870:execute - Popen(['git', 'version'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=None)
-2022-08-02 13:23:17 [DEBUG] cmd.py:870:execute - Popen(['git', 'version'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=None)
-2022-08-02 13:23:17 [DEBUG] cmd.py:870:execute - Popen(['git', 'cat-file', '--batch-check'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=<valid stream>)
-2022-08-02 13:23:29 [DEBUG] cmd.py:870:execute - Popen(['git', 'version'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=None)
-2022-08-02 13:23:29 [DEBUG] cmd.py:870:execute - Popen(['git', 'version'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=None)
-2022-08-02 13:23:29 [DEBUG] cmd.py:870:execute - Popen(['git', 'cat-file', '--batch-check'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=<valid stream>)
-2022-08-02 13:23:29 [DEBUG] main.py:71:<module> - ================ Start of ML Workflow ================
-2022-08-02 13:23:29 [DEBUG] ingest_data.py:134:data_preprocessing - Fetching and loading dataset
-2022-08-02 13:23:29 [DEBUG] ingest_data.py:143:data_preprocessing - Handling missing values.
-2022-08-02 13:23:29 [DEBUG] ingest_data.py:150:data_preprocessing - Preprocessing the dataset.
-2022-08-02 13:23:29 [DEBUG] ingest_data.py:207:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
-2022-08-02 13:23:29 [INFO] ingest_data.py:221:split_train_test_data - storing train and test processed dataset into path "data/processed/"
-2022-08-02 13:23:30 [DEBUG] ingest_data.py:224:split_train_test_data - End of data collection and preprocessing step.
-2022-08-02 13:23:30 [DEBUG] train.py:135:train_model - Loading training dataset.
-2022-08-02 13:23:30 [DEBUG] train.py:100:random_forest_grid_search - Model training with Grid search.
-2022-08-02 13:24:10 [INFO] train.py:149:train_model - Stored train model at: "artifacts/model.joblib"
-2022-08-02 13:28:07 [DEBUG] cmd.py:870:execute - Popen(['git', 'version'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=None)
-2022-08-02 13:28:07 [DEBUG] cmd.py:870:execute - Popen(['git', 'version'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=None)
-2022-08-02 13:28:07 [DEBUG] cmd.py:870:execute - Popen(['git', 'cat-file', '--batch-check'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=<valid stream>)
-2022-08-02 13:28:07 [DEBUG] main.py:71:<module> - ================ Start of ML Workflow ================
-2022-08-02 13:28:07 [DEBUG] ingest_data.py:134:data_preprocessing - Fetching and loading dataset
-2022-08-02 13:28:08 [DEBUG] ingest_data.py:143:data_preprocessing - Handling missing values.
-2022-08-02 13:28:08 [DEBUG] ingest_data.py:150:data_preprocessing - Preprocessing the dataset.
-2022-08-02 13:28:08 [DEBUG] ingest_data.py:207:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
-2022-08-02 13:28:08 [INFO] ingest_data.py:221:split_train_test_data - storing train and test processed dataset into path "data/processed/"
-2022-08-02 13:28:08 [DEBUG] ingest_data.py:224:split_train_test_data - End of data collection and preprocessing step.
-2022-08-02 13:28:08 [DEBUG] train.py:135:train_model - Loading training dataset.
-2022-08-02 13:28:08 [DEBUG] train.py:100:random_forest_grid_search - Model training with Grid search.
-2022-08-02 13:28:50 [INFO] train.py:149:train_model - Stored train model at: "artifacts/model.joblib"
-2022-08-02 13:28:50 [DEBUG] score.py:128:score_model - Loading validation dataset.
-2022-08-02 13:28:50 [DEBUG] score.py:138:score_model - Load trained model.
-2022-08-02 13:28:50 [DEBUG] score.py:97:predict_on_test_data - Make prediction on validation dataset.
-2022-08-02 13:28:50 [INFO] score.py:144:score_model - final RMSE Score: 47464.65766857914
-2022-08-02 13:30:01 [DEBUG] cmd.py:870:execute - Popen(['git', 'version'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=None)
-2022-08-02 13:30:01 [DEBUG] cmd.py:870:execute - Popen(['git', 'version'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=None)
-2022-08-02 13:30:01 [DEBUG] cmd.py:870:execute - Popen(['git', 'cat-file', '--batch-check'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=<valid stream>)
-2022-08-02 13:30:01 [DEBUG] main.py:71:<module> - ================ Start of ML Workflow ================
-2022-08-02 13:30:01 [DEBUG] ingest_data.py:134:data_preprocessing - Fetching and loading dataset
-2022-08-02 13:30:02 [DEBUG] ingest_data.py:143:data_preprocessing - Handling missing values.
-2022-08-02 13:30:02 [DEBUG] ingest_data.py:150:data_preprocessing - Preprocessing the dataset.
-2022-08-02 13:30:02 [DEBUG] ingest_data.py:207:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
-2022-08-02 13:30:02 [INFO] ingest_data.py:221:split_train_test_data - storing train and test processed dataset into path "data/processed/"
-2022-08-02 13:30:02 [DEBUG] ingest_data.py:224:split_train_test_data - End of data collection and preprocessing step.
-2022-08-02 13:30:02 [DEBUG] train.py:135:train_model - Loading training dataset.
-2022-08-02 13:30:02 [DEBUG] train.py:100:random_forest_grid_search - Model training with Grid search.
-2022-08-02 13:30:44 [INFO] train.py:149:train_model - Stored train model at: "artifacts/model.joblib"
-2022-08-02 13:30:44 [DEBUG] score.py:128:score_model - Loading validation dataset.
-2022-08-02 13:30:44 [DEBUG] score.py:138:score_model - Load trained model.
-2022-08-02 13:30:44 [DEBUG] score.py:97:predict_on_test_data - Make prediction on validation dataset.
-2022-08-02 13:30:44 [INFO] score.py:144:score_model - final RMSE Score: 47464.65766857914
-2022-08-02 13:30:44 [INFO] main.py:95:<module> - Score of RF model is 47464.65766857914
-2022-08-02 13:30:44 [DEBUG] main.py:97:<module> - ================ End of ML Workflow ================
-2022-08-02 19:05:12 [DEBUG] cmd.py:870:execute - Popen(['git', 'version'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=None)
-2022-08-02 19:05:12 [DEBUG] cmd.py:870:execute - Popen(['git', 'version'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=None)
-2022-08-02 19:05:12 [DEBUG] cmd.py:870:execute - Popen(['git', 'cat-file', '--batch-check'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=<valid stream>)
-2022-08-02 19:05:12 [DEBUG] main.py:71:<module> - ================ Start of ML Workflow ================
-2022-08-02 19:05:12 [DEBUG] ingest_data.py:134:data_preprocessing - Fetching and loading dataset
-2022-08-02 19:05:13 [DEBUG] ingest_data.py:143:data_preprocessing - Handling missing values.
-2022-08-02 19:05:13 [DEBUG] ingest_data.py:150:data_preprocessing - Preprocessing the dataset.
-2022-08-02 19:05:13 [DEBUG] ingest_data.py:207:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
-2022-08-02 19:05:13 [INFO] ingest_data.py:221:split_train_test_data - storing train and test processed dataset into path "data/processed/"
-2022-08-02 19:05:13 [DEBUG] ingest_data.py:224:split_train_test_data - End of data collection and preprocessing step.
-2022-08-02 19:05:13 [DEBUG] train.py:135:train_model - Loading training dataset.
-2022-08-02 19:05:13 [DEBUG] train.py:100:random_forest_grid_search - Model training with Grid search.
+2022-08-03 14:39:45 [DEBUG] cmd.py:870:execute - Popen(['git', 'version'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=None)
+2022-08-03 14:39:45 [DEBUG] cmd.py:870:execute - Popen(['git', 'version'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=None)
+2022-08-03 14:39:45 [DEBUG] cmd.py:870:execute - Popen(['git', 'cat-file', '--batch-check'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=<valid stream>)
+2022-08-03 14:39:45 [DEBUG] main.py:71:<module> - ================ Start of ML Workflow ================
+2022-08-03 14:39:45 [DEBUG] ingest_data.py:134:data_preprocessing - Fetching and loading dataset
+2022-08-03 14:39:45 [DEBUG] ingest_data.py:143:data_preprocessing - Handling missing values.
+2022-08-03 14:39:45 [DEBUG] ingest_data.py:150:data_preprocessing - Preprocessing the dataset.
+2022-08-03 14:39:45 [DEBUG] ingest_data.py:207:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
+2022-08-03 14:39:45 [INFO] ingest_data.py:221:split_train_test_data - storing train and test processed dataset into path "data/processed/"
+2022-08-03 14:39:45 [DEBUG] ingest_data.py:224:split_train_test_data - End of data collection and preprocessing step.
+2022-08-03 14:39:45 [DEBUG] train.py:135:train_model - Loading training dataset.
+2022-08-03 14:39:45 [DEBUG] train.py:100:random_forest_grid_search - Model training with Grid search.
+2022-08-03 14:43:27 [DEBUG] ingest_data.py:250:main - Start Data Collection & Preprocessing Phase =======
+2022-08-03 14:43:27 [DEBUG] ingest_data.py:134:data_preprocessing - Fetching and loading dataset
+2022-08-03 14:43:27 [DEBUG] ingest_data.py:143:data_preprocessing - Handling missing values.
+2022-08-03 14:43:27 [DEBUG] ingest_data.py:150:data_preprocessing - Preprocessing the dataset.
+2022-08-03 14:43:27 [DEBUG] ingest_data.py:207:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
+2022-08-03 14:43:27 [INFO] ingest_data.py:221:split_train_test_data - storing train and test processed dataset into path "data/processed/"
+2022-08-03 14:43:27 [DEBUG] cmd.py:870:execute - Popen(['git', 'version'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=None)
+2022-08-03 14:43:27 [DEBUG] cmd.py:870:execute - Popen(['git', 'version'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=None)
+2022-08-03 14:43:27 [DEBUG] cmd.py:870:execute - Popen(['git', 'cat-file', '--batch-check'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=<valid stream>)
+2022-08-03 14:43:27 [DEBUG] ingest_data.py:224:split_train_test_data - End of data collection and preprocessing step.
+2022-08-03 14:43:27 [DEBUG] ingest_data.py:252:main - End Data Collection & Preprocessing Phase =========
+2022-08-03 14:43:36 [DEBUG] cmd.py:870:execute - Popen(['git', 'version'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=None)
+2022-08-03 14:43:36 [DEBUG] cmd.py:870:execute - Popen(['git', 'version'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=None)
+2022-08-03 14:43:36 [DEBUG] cmd.py:870:execute - Popen(['git', 'cat-file', '--batch-check'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=<valid stream>)
+2022-08-03 14:43:36 [DEBUG] main.py:71:<module> - ================ Start of ML Workflow ================
+2022-08-03 14:43:36 [DEBUG] ingest_data.py:134:data_preprocessing - Fetching and loading dataset
+2022-08-03 14:43:37 [DEBUG] ingest_data.py:143:data_preprocessing - Handling missing values.
+2022-08-03 14:43:37 [DEBUG] ingest_data.py:150:data_preprocessing - Preprocessing the dataset.
+2022-08-03 14:43:37 [DEBUG] ingest_data.py:207:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
+2022-08-03 14:43:37 [INFO] ingest_data.py:221:split_train_test_data - storing train and test processed dataset into path "data/processed/"
+2022-08-03 14:43:37 [DEBUG] ingest_data.py:224:split_train_test_data - End of data collection and preprocessing step.
+2022-08-03 14:43:37 [DEBUG] train.py:135:train_model - Loading training dataset.
+2022-08-03 14:43:37 [DEBUG] train.py:100:random_forest_grid_search - Model training with Grid search.
+2022-08-03 14:44:26 [DEBUG] ingest_data.py:134:data_preprocessing - Fetching and loading dataset
+2022-08-03 14:44:26 [DEBUG] ingest_data.py:143:data_preprocessing - Handling missing values.
+2022-08-03 14:44:26 [DEBUG] ingest_data.py:150:data_preprocessing - Preprocessing the dataset.
+2022-08-03 14:44:26 [DEBUG] ingest_data.py:207:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
+2022-08-03 14:44:27 [INFO] ingest_data.py:221:split_train_test_data - storing train and test processed dataset into path "data/processed/"
+2022-08-03 14:44:27 [DEBUG] cmd.py:870:execute - Popen(['git', 'version'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=None)
+2022-08-03 14:44:27 [DEBUG] cmd.py:870:execute - Popen(['git', 'version'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=None)
+2022-08-03 14:44:27 [DEBUG] ingest_data.py:224:split_train_test_data - End of data collection and preprocessing step.
+2022-08-03 14:44:27 [DEBUG] ingest_data.py:134:data_preprocessing - Fetching and loading dataset
+2022-08-03 14:44:27 [DEBUG] ingest_data.py:143:data_preprocessing - Handling missing values.
+2022-08-03 14:44:27 [DEBUG] ingest_data.py:150:data_preprocessing - Preprocessing the dataset.
+2022-08-03 14:44:27 [DEBUG] ingest_data.py:207:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
+2022-08-03 14:44:27 [INFO] ingest_data.py:221:split_train_test_data - storing train and test processed dataset into path "data/processed/"
+2022-08-03 14:44:27 [DEBUG] ingest_data.py:224:split_train_test_data - End of data collection and preprocessing step.
+2022-08-03 14:44:27 [DEBUG] train.py:100:random_forest_grid_search - Model training with Grid search.
+2022-08-03 16:31:19 [DEBUG] cmd.py:870:execute - Popen(['git', 'version'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=None)
+2022-08-03 16:31:19 [DEBUG] cmd.py:870:execute - Popen(['git', 'version'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=None)
+2022-08-03 16:31:19 [DEBUG] cmd.py:870:execute - Popen(['git', 'cat-file', '--batch-check'], cwd=/home/saurabhzinjad/drive/mle-training-repo, universal_newlines=False, shell=None, istream=<valid stream>)
+2022-08-03 16:31:19 [DEBUG] main.py:71:<module> - ================ Start of ML Workflow ================
+2022-08-03 16:31:19 [DEBUG] ingest_data.py:134:data_preprocessing - Fetching and loading dataset
+2022-08-03 16:31:19 [DEBUG] ingest_data.py:143:data_preprocessing - Handling missing values.
+2022-08-03 16:31:19 [DEBUG] ingest_data.py:150:data_preprocessing - Preprocessing the dataset.
+2022-08-03 16:31:19 [DEBUG] ingest_data.py:207:split_train_test_data - Spliting dataset into train and test set using stratifed shuffle technique.
+2022-08-03 16:31:19 [INFO] ingest_data.py:221:split_train_test_data - storing train and test processed dataset into path "data/processed/"
+2022-08-03 16:31:19 [DEBUG] ingest_data.py:224:split_train_test_data - End of data collection and preprocessing step.
+2022-08-03 16:31:20 [DEBUG] train.py:135:train_model - Loading training dataset.
+2022-08-03 16:31:20 [DEBUG] train.py:100:random_forest_grid_search - Model training with Grid search.
+2022-08-03 16:32:00 [INFO] train.py:150:train_model - Stored train model at: "artifacts/model.joblib"
+2022-08-03 16:32:01 [DEBUG] score.py:128:score_model - Loading validation dataset.
+2022-08-03 16:32:01 [DEBUG] score.py:138:score_model - Load trained model.
+2022-08-03 16:32:01 [DEBUG] score.py:97:predict_on_test_data - Make prediction on validation dataset.
+2022-08-03 16:32:01 [INFO] score.py:144:score_model - final RMSE Score: 47464.65766857914
+2022-08-03 16:32:01 [INFO] main.py:95:<module> - Score of RF model is 47464.65766857914
+2022-08-03 16:32:01 [DEBUG] main.py:97:<module> - ================ End of ML Workflow ================

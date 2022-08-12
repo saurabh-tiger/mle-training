@@ -17,10 +17,12 @@ The following techniques have been used:
 ## Setup and Installation
 ```bash
 # install dependencies for project
-$ conda env create -f deploy/conda/env.yml
+$ conda env create -f deploy/conda/env.yaml
 
 # Create wheel or tar file packge
-$ python3 setup.py sdist bdist_wheel 
+$ python3 setup.py sdist bdist_wheel
+
+$ pip install houseValuePrediction-0.0.2-py3-none-any.whl
 
 $ python3 setup.py install
 # Or
@@ -29,6 +31,9 @@ $ pip install -e .
 # Run project
 $ python3 src/main.py
 ```
+### NOTE: 
+1. [environment yaml](deploy/conda/env.yaml) file is stored under deploy/conda directory. click here to navigate.
+2. you can find Wheel (`.whl`) and sdist (`tar.gz`) file under [dist](dist/) folder
 
 ## Run Test Script 
 - To run default test case run following command:
