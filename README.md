@@ -17,7 +17,7 @@ The following techniques have been used:
 ## Setup and Installation
 ```bash
 # install dependencies for project
-$ conda env create -f deploy/conda/env.yaml
+$ conda env create -f deploy/conda/env.yml
 
 # Create wheel or tar file packge
 $ python3 setup.py sdist bdist_wheel
@@ -32,7 +32,7 @@ $ pip install -e .
 $ python3 src/main.py
 ```
 ### NOTE: 
-1. [environment yaml](deploy/conda/env.yaml) file is stored under deploy/conda directory. click here to navigate.
+1. [environment yaml](deploy/conda/env.yml) file is stored under deploy/conda directory. click here to navigate.
 2. you can find Wheel (`.whl`) and sdist (`tar.gz`) file under [dist](dist/) folder
 
 ## Run Test Script 
